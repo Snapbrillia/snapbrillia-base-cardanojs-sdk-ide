@@ -1,0 +1,11 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - name: Setup
+    init: >
+        git clone https://github.com/input-output-hk/cardano-js-sdk &&
+        nvm install &&
+        nvm use && 
+        yarn install
+    command: yarn build
